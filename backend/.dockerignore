@@ -1,0 +1,19 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+
+# Build artifacts (not source)
+url-lengthener
+
+# Vendor (will be downloaded during build)
+vendor/
