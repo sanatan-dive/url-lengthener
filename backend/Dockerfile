@@ -1,6 +1,7 @@
 FROM golang:1.20-alpine AS builder
 WORKDIR /app
 COPY . .
+RUN ls -la && ls -la cmd/ && ls -la cmd/server/ || echo "cmd/server not found"
 RUN go mod download
 RUN CGO_ENABLED=0 GOOS=linux go build -o /url-lengthener ./cmd/server
 
