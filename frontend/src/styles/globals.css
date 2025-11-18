@@ -18,7 +18,17 @@
 
   body {
     @apply bg-cover bg-center bg-fixed bg-no-repeat;
+    background-color: #1a1a2e; /* Fallback color while image loads */
     background-image: url("/visax.jpg");
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
+  /* Optimize background image loading */
+  @supports (content-visibility: auto) {
+    body {
+      content-visibility: auto;
+    }
   }
 
   body::before {
